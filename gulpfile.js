@@ -30,7 +30,8 @@ $.gulp.task('dev', $.gulp.series(
 		'pug',
 		'styles:app',
 		$.gulp.series(
-			'scripts'
+			'scripts',
+			'scripts:libs'
 		),
 		'svg',
 		'img',
