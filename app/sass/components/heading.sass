@@ -1,0 +1,38 @@
+.heading
+  max-width: 50rem
+
+  &__title
+    font-weight: normal
+    font-size: 8rem
+    line-height: 9.8rem
+    text-shadow: 0 .4rem .4rem rgba(0, 0, 0, 0.25)
+
+    &_bold  
+      font-weight: bold
+      text-shadow: none
+  
+  &__separator
+    margin: 3rem 0
+    width: 100%
+    max-width: 21rem
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+    span
+      height: 1rem
+      width: calc(200% / 3)
+      background-color: $main-color
+      border-radius: 1rem
+
+      &:not(:last-child)
+        margin-bottom: 1rem
+
+      &:nth-child(even)
+        margin-left: calc(100% / 3)
+
+  &__subtitle
+    max-width: 33.5rem
+    font-weight: normal
+    font-size: 3rem
+    line-height: 150%

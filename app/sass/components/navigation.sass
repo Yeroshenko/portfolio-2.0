@@ -1,0 +1,48 @@
+#fp-nav
+  width: 4rem
+  height: 10rem
+
+  &.fp-left
+    left: 4rem
+
+  ul 
+    width: 100%
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: space-between
+    flex-direction: column
+
+    li
+      width: 100%
+      height: .4rem
+      margin: 0
+      
+      a span
+        background-color: #fff
+        border-radius: .5rem
+        width: 2rem
+        height: .4rem
+        margin: 0
+        left: 0
+        top: 0
+
+      a.active span 
+        border-radius: .5rem
+        width: 4rem
+        height: .4rem
+        margin: 0
+
+      &:hover 
+        a span 
+          width: 3rem
+          height: .4rem
+          margin: 0
+          border-radius: .5rem
+
+        a.active span
+          width: 4rem
+          height: .4rem
+          margin: 0
+          border-radius: .5rem
+

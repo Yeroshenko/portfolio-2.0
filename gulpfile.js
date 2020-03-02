@@ -16,7 +16,8 @@ global.$ = {
 
   path: {
     task: require('./gulp/paths/tasks.js'),
-    libs: require('./gulp/paths/libs.js')
+    jsLibs: require('./gulp/paths/js-libs.js'),
+    cssLibs: require('./gulp/paths/css-libs.js')
   }
 };
 
@@ -28,7 +29,8 @@ $.gulp.task('dev', $.gulp.series(
 	'clean',
 	$.gulp.parallel(
 		'pug',
-		'styles:app',
+		'styles',
+		'styles:libs',
 		$.gulp.series(
 			'scripts',
 			'scripts:libs'

@@ -11,7 +11,7 @@ module.exports = function () {
   });
 
   $.gulp.task('scripts:libs', () => {
-    return $.gulp.src($.path.libs)
+    return $.gulp.src($.path.jsLibs)
       .pipe($.gp.concat('libs.js'))
       .pipe($.gulp.dest('./dist/js/'));
   });
