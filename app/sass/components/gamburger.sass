@@ -6,7 +6,7 @@
   transition: .5s ease-in-out
   cursor: pointer
 
-  span
+  &__item
     display: block
     position: absolute
     height: .4rem
@@ -18,33 +18,30 @@
     transform: rotate(0deg)
     transition: .25s ease-in-out
 
-    &:nth-child(1) 
+    &_first 
       top: 0
 
-    &:nth-child(2) 
+    &_second
       top: 1.3rem
 
-    &:nth-child(3) 
+    &_third
       top: 1.3rem
 
-    &:nth-child(4) 
+    &_fourth
       top: 2.6rem
       
   &.open
-    span
+    .gamburger__item
 
-      &:nth-child(1) 
+      &_first
         top: 1.2rem
         width: 0%
         left: 50%
-
-      &:nth-child(2) 
+      &_second
         transform: rotate(45deg)
-
-      &:nth-child(3) 
+      &_third
         transform: rotate(-45deg)
-
-      &:nth-child(4) 
+      &_fourth
         top: 1.2rem
         width: 0%
         left: 50%

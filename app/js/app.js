@@ -1,9 +1,67 @@
 const fullPage = new fullpage('#fullpage', {
-    
-  anchors:['welcome', 'works', 'about', 'contacts'],
-  autoScrolling:true,
+
+  anchors: ['home', 'works', 'about', 'contacts'],
+  autoScrolling: true,
   scrollHorizontally: true,
   navigation: true,
   navigationPosition: 'left'
-  
+
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  const welcomeParallax = {
+
+    welcomeSection: document.getElementById('welcome'),
+    layers: document.getElementById('parallax-container').children,
+
+    init() {
+      const moveLayers = (e) => {
+
+        let initialX = (window.innerWidth / 2) - e.pageX
+        let initialY = (window.innerHeight / 2) - e.pageY
+
+        // Array.prototype.slice.calll() => node list to array
+        Array.prototype.slice.call(this.layers).forEach((layer, i) => {
+
+          const divider = (i + 1) / 80
+          const positionX = initialX * divider
+          const positionY = initialY * divider
+          const bottomPosition = (window.innerHeight / 2) * divider
+
+          layer.style.transform = `translate(${positionX}px, ${positionY}px)`;
+          layer.style.bottom = ` -${bottomPosition}px`
+        })
+      }
+      
+      this.welcomeSection.addEventListener('mousemove', moveLayers)
+    }
+  }
+
+  welcomeParallax.init()
+
+  const menu = {
+
+    menu: document.querySelector('.menu'),
+    menuTriger: document.querySelector('.gamburger'),
+    menuItem: document.querySelectorAll('.menu-list__item'),
+
+    init() {
+
+      const toggleMenu = () => {
+        this.menuTriger.classList.toggle('open')
+        this.menu.classList.toggle('is-active')
+      }
+
+      this.menuTriger.addEventListener('click', toggleMenu)
+
+      this.menuItem.forEach((item) => {
+        item.addEventListener('click', toggleMenu)
+      })
+
+    }
+  }
+
+  menu.init()
+
+})

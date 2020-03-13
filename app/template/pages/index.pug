@@ -8,20 +8,57 @@ block content
   header.header
     a.logo(href="./") Yeroshenko
     .gamburger
-      span
-      span
-      span
-      span
+      span.gamburger__item.gamburger__item_first
+      span.gamburger__item.gamburger__item_second
+      span.gamburger__item.gamburger__item_third
+      span.gamburger__item.gamburger__item_fourth
+
+  nav.menu
+    ul.menu-list
+      li.menu-list__item
+        a(href="#home").menu-list__link Home
+      li.menu-list__item
+        a(href="#works").menu-list__link Works
+      li.menu-list__item
+        a(href="#about").menu-list__link About me
+      li.menu-list__item
+        a(href="#contacts").menu-list__link Contacts
+
 
   main#fullpage
-    section.section.welcome 
-      .heading
-        h1.heading__title.heading__title_bold Valeriy Yeroshenko
-        .heading__separator
-          span
-          span
-        h3.heading__subtitle Front-end / react&nbsp;developer
+    section.section.welcome#welcome
+      .container
+        .heading
+          h1.heading__title.heading__title_bold Valeriy Yeroshenko
+          .heading__separator
+            span
+            span
+          h3.heading__subtitle Front-end / react&nbsp;developer
+        .parallax
+          .parallax__inner#parallax-container
+            .parallax__item
+              img(src="./img/content/welcome-parallax/back.svg" alt="")
+            .parallax__item
+              img(src="./img/content/welcome-parallax/moon.svg" alt="")
+            .parallax__item
+              img(src="./img/content/welcome-parallax/front.svg" alt="")
+    section.section.works
+      .container
+        .heading
+          h1.heading__title React quiz app
+          .heading__separator
+            span
+            span
+          h3.heading__subtitle Single page aplication
 
-    section.section.works works
-    section.section.about about
+
+    section.section.about 
+      .container
+        .heading
+          h1.heading__title About me
+          .heading__separator
+            span
+            span
+          h3.heading__subtitle 19 y.o., love coding , design and speedcubing🙂
+
     section.section.contacts contacts
