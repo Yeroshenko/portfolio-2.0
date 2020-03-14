@@ -1,18 +1,18 @@
-const fullPage = new fullpage('#fullpage', {
-
-  anchors: ['home', 'works', 'about', 'contacts'],
-  autoScrolling: true,
-  scrollHorizontally: true,
-  navigation: true,
-  navigationPosition: 'left'
-
-});
-
 document.addEventListener('DOMContentLoaded', () => {
+
+  const fullPage = new fullpage('#fullpage', {
+
+    anchors: ['home', 'works', 'about', 'contacts'],
+    autoScrolling: true,
+    scrollHorizontally: true,
+    navigation: true,
+    navigationPosition: 'left'
+
+  });
 
   const welcomeParallax = {
 
-    welcomeSection: document.getElementById('welcome'),
+    welcomeSection: document.querySelector('.welcome'),
     layers: document.getElementById('parallax-container').children,
 
     init() {
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
           layer.style.bottom = ` -${bottomPosition}px`
         })
       }
-      
+
       this.welcomeSection.addEventListener('mousemove', moveLayers)
     }
   }
@@ -63,5 +63,31 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   menu.init()
+
+  const cardMove = {
+
+    cards: document.querySelectorAll('.content__inner'),
+
+    init() {
+
+      this.cards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+
+          const divider = -55
+
+          const halfHeight = card.offsetHeight / 2
+          const halfWidth = card.offsetWidth / 2
+
+          const tiltX = (e.offsetY - halfHeight) / divider
+          const tiltY = (e.offsetX - halfWidth) / divider
+
+          card.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg)`
+        })
+      })
+    }
+  }
+
+  cardMove.init()
+
 
 })

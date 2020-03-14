@@ -26,10 +26,10 @@ block content
 
 
   main#fullpage
-    section.section.welcome#welcome
+    section.section.welcome
       .container
         .heading
-          h1.heading__title.heading__title_bold Valeriy Yeroshenko
+          h1.heading__title Valeriy Yeroshenko
           .heading__separator
             span
             span
@@ -42,6 +42,7 @@ block content
               img(src="./img/content/welcome-parallax/moon.svg" alt="")
             .parallax__item
               img(src="./img/content/welcome-parallax/front.svg" alt="")
+
     section.section.works
       .container
         .heading
@@ -50,7 +51,13 @@ block content
             span
             span
           h3.heading__subtitle Single page aplication
+          a(href="#").heading__btn visit site
 
+        .content
+          .content__inner
+            .content__img
+              img(src="./img/content/work.jpg" alt="")
+            .content__text 01
 
     section.section.about 
       .container
@@ -60,5 +67,8 @@ block content
             span
             span
           h3.heading__subtitle 19 y.o., love coding , design and speedcubing🙂
+                     
+        .content
+          .content__img
 
     section.section.contacts contacts
