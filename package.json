@@ -1,5 +1,5 @@
 {
-  "name": "ortfolio",
+  "name": "portfolio",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -22,7 +22,7 @@
     "gulp-concat": "^2.6.1",
     "gulp-css-unit": "^1.2.2",
     "gulp-csso": "^4.0.1",
-    "gulp-load-plugins": "^2.0.1",
+    "gulp-load-plugins": "^2.0.2",
     "gulp-minify": "^3.1.0",
     "gulp-notify": "^3.2.0",
     "gulp-plumber": "^1.2.1",
@@ -35,6 +35,5 @@
     "gulp-uglify-es": "^2.0.0"
   },
   "dependencies": {
-    "animate.css": "^3.7.2"
   }
 }

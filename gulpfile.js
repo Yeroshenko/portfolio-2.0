@@ -35,7 +35,6 @@ $.gulp.task('dev', $.gulp.series(
 			'scripts',
 			'scripts:libs'
 		),
-		'svg',
 		'img',
 		// 'fonts'
 	)

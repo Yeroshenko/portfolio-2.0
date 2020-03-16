@@ -1,14 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+  /* LIBS */
   const fullPage = new fullpage('#fullpage', {
 
     anchors: ['home', 'works', 'about', 'contacts'],
     autoScrolling: true,
     scrollHorizontally: true,
     navigation: true,
-    navigationPosition: 'left'
+    navigationPosition: 'left',
 
-  });
+  })
 
   const welcomeParallax = {
 
@@ -73,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
       this.cards.forEach(card => {
         card.addEventListener('mousemove', (e) => {
 
-          const divider = -55
+          const divider = 65
 
           const halfHeight = card.offsetHeight / 2
           const halfWidth = card.offsetWidth / 2
