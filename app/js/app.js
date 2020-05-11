@@ -1,30 +1,25 @@
 document.addEventListener('DOMContentLoaded', () => {
-
-  /* LIBS */
+  
+  /* Full page */
   const fullPage = new fullpage('#fullpage', {
-
     anchors: ['home', 'works', 'about', 'contacts'],
     autoScrolling: true,
     scrollHorizontally: true,
     navigation: true,
     navigationPosition: 'left',
-
   })
 
   const welcomeParallax = {
-
     welcomeSection: document.querySelector('.welcome'),
     layers: document.getElementById('parallax-container').children,
 
     init() {
       const moveLayers = (e) => {
-
         let initialX = (window.innerWidth / 2) - e.pageX
         let initialY = (window.innerHeight / 2) - e.pageY
 
         // Array.prototype.slice.calll() => node list to array
         Array.prototype.slice.call(this.layers).forEach((layer, i) => {
-
           const divider = (i + 1) / 80
           const positionX = initialX * divider
           const positionY = initialY * divider
@@ -34,7 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
           layer.style.bottom = ` -${bottomPosition}px`
         })
       }
-
       this.welcomeSection.addEventListener('mousemove', moveLayers)
     }
   }
@@ -42,13 +36,11 @@ document.addEventListener('DOMContentLoaded', () => {
   welcomeParallax.init()
 
   const menu = {
-
     menu: document.querySelector('.menu'),
     menuTriger: document.querySelector('.gamburger'),
     menuItem: document.querySelectorAll('.menu-list__item'),
 
     init() {
-
       const toggleMenu = () => {
         this.menuTriger.classList.toggle('open')
         this.menu.classList.toggle('is-active')
@@ -66,19 +58,14 @@ document.addEventListener('DOMContentLoaded', () => {
   menu.init()
 
   const cardMove = {
-
     cards: document.querySelectorAll('.content__inner'),
 
     init() {
-
       this.cards.forEach(card => {
         card.addEventListener('mousemove', (e) => {
-
           const divider = 65
-
           const halfHeight = card.offsetHeight / 2
           const halfWidth = card.offsetWidth / 2
-
           const tiltX = (e.offsetY - halfHeight) / divider
           const tiltY = (e.offsetX - halfWidth) / divider
 
@@ -89,6 +76,4 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   cardMove.init()
-
-
 })

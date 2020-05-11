@@ -34,6 +34,5 @@
     "gulp-svgmin": "^2.2.0",
     "gulp-uglify-es": "^2.0.0"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
